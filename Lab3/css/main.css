@@ -1,0 +1,24 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header{
+    color: rgb(131, 131, 131);
+
+}
+
+footer{
+    color: rgb(0, 0, 0);
+}
+
+.fondo_azul{
+    background-color: rgb(87, 111, 133);
+}
+#Matricula
+{
+    color: brown;
+}
+
+h2:hover{
+    color: aqua;
+}
