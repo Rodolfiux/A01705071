@@ -1,5 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 50em;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
 
 }
 header{
@@ -20,5 +25,10 @@ footer{
 }
 
 h2:hover{
-    color: aqua;
+    color: #333;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+h1{
+    color: #333;
 }
