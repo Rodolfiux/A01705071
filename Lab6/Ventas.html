@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="ventas.js"></script>
+</head>
+<body>
+    <h3>El mercado</h3>
+    <ul>
+        <li>Kilo de limon: 25$</li>
+        <li>Kilo de naranjas :30$</li>
+        <li>Melon: 15$ c/u</li>
+    </ul>
+    <form id="form" action="" method="GET">
+        <label for="limon">Kilo de limon</label>
+        <input id="limon" type="number" min="1" max ="10">
+
+
+        <label for="Naranjas">Kilo de Narnjas</label>
+        <input id="Naranjas" type="number" min="1" max ="10">
+
+        <label for="Melon">Melones</label>
+        <input id="Melon" type="number" min="1" max ="10">
+
+
+        <div id="precioTotal"></div>
+        <div id="iva"></div>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
