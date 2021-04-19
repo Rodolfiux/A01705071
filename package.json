@@ -1,0 +1,19 @@
+{
+  "name": "mascotas",
+  "version": "1.0.0",
+  "description": "Laboratorios",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodolfiux/A01705071.git"
+  },
+  "author": "Rodolfo Renteria Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodolfiux/A01705071/issues"
+  },
+  "homepage": "https://github.com/Rodolfiux/A01705071#readme"
+}

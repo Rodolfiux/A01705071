@@ -1,0 +1,68 @@
+.barra1{
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+
+.barra2{
+        width: 100%;
+        
+        border-radius: 1%;
+        display: inline-block;
+        background-color: aqua;
+    }
+.columna1{
+    display: inline-block;
+    text-align: center;
+    
+    width: 20%;
+}
+.columna2{
+    display:inline-block;
+    text-align: center;
+    
+    width: 40%;
+}
+.columna3{
+    display:inline-block;
+    text-align: right;
+    
+    width: 30%;
+}
+
+
+.barra3{
+    width: 100%;
+        
+    border-radius: 1%;
+    display: inline-block;
+    background-color: rgb(171, 192, 192);
+    margin-top: 2%;
+
+
+}
+
+.columna1a{
+    display: inline-block;
+    width: 20%;
+
+
+
+}
+
+.columna2b{
+    display: inline-block;
+    width: 70%;
+
+
+
+}
+
+.form-inline{
+    display: flex;
+    flex-flow: row wrap;
+
+
+
+
+}
