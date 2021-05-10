@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="lista_limones">
     <% for (Limones of Limones) { %>
         <div class="col l3 m4 s12">
             <div class="card">
@@ -12,8 +12,70 @@
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><%= Limones.Nombre %><i class="material-icons right">close</i></span>
                 <p><%= Limones.descripcion %></p>
+                <button class="red white-text" onclick="eliminar(<%= Limones.Id %>)"><i class="small material-icons">delete</i></button>
+                
             </div>
             </div>
         </div>
     <% } %>
 </div>
+<script>
+    const eliminar = (id) => {
+        //El token de protección CSRF
+        //const csrf = document.getElementById('_csrf').value;
+
+        
+        let data = {Limon_id: id};
+        console.log(data);
+        //función que manda la petición asíncrona
+        fetch('/limones/eliminar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              //  'csrf-token': csrf
+            },
+            body: JSON.stringify(data)
+        }).then(result => {
+            return result.json(); //Regresa otra promesa
+        }).then(data => {
+            //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
+            
+            console.log("Respuesta de la petición asíncrona");
+            console.log(data);
+
+            let html = '';
+            for (let Limon of limones.data) { 
+                html += '<div class="col l3 m4 s12">' +
+                            '<div class="card">' +
+                                '<div class="card-image waves-effect waves-block waves-light">' +
+                                    '<img class="activator" src="' + Limones.imagen + '">' +
+                                '</div>' +
+                                '<div class="card-content">' +
+                                    '<span class="card-title activator grey-text text-darken-4">' + Limones.nombre + '<i class="material-icons right">more_vert</i></span>' +
+                                    '<p>' + Limones.fecha + '</p>' +
+                                '</div>' +
+                                '<div class="card-reveal">' +
+                                    '<span class="card-title grey-text text-darken-4">'+ Limones.nombre + '<i class="material-icons right">close</i></span>' +
+                                    '<p>' + Limones.descripcion + '</p>' +
+                                    '<button class="red white-text" onclick="eliminar('+ Limones.id +')"><i class="small material-icons">delete</i></button>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>';
+
+                        
+            }
+            document.getElementById('lista_limones').innerHTML = html;
+            M.toast({html: 'Un limon fue eliminado'})
+
+
+
+
+
+
+
+
+        }).catch(err => {
+            console.log(err);
+        });
+    };
+</script>

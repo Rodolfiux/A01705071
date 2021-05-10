@@ -33,5 +33,9 @@ module.exports = class Limon {
     return db.execute('SELECT * FROM limones WHERE id = ?', [id]);
         
    }
+   static delete(id) {
+
+    return db.execute('DELETE FROM limones WHERE id = ?', [id]);
+    }
 
 }

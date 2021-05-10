@@ -1,25 +1,20 @@
 <%- include('includes/head.ejs') %>
 <%- include('includes/navbar.ejs') %>
   <div class="container">
-    <h1>Limonera</h1>
+    <h1><%= titulo %></h1>
 
     <% if (error !== false) { %>
-
-    <span class="red darken-1"><%- error %>  </span>    
-        
+        <span class="red"><%- error %>  </span>    
     <% } %>  
-    <form action="new" method="POST">
+    <form action="login" method="POST">
 
       <label for="username">Nombre de usuario</label>
       <input type="text" name="username" required>
-      
-      <label for="nombre">Nombre completo</label>
-      <input type="text" name="nombre" required>
 
       <label for="password">Password</label>
       <input type="password" name="password" required >
       
-      <input type="submit" name="enviar" value="Ingresar">
+      <input type="submit" name="enviar" value="Entrar">
     </form>
   </div>
 <%- include('includes/foot.ejs') %>    

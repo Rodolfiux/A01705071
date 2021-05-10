@@ -58,4 +58,27 @@ exports.getLimon = (request, response, next) => {
 
     .catch(err => console.log(err));
 }
+exports.postLimon = (request, response, next) => {
+
+    console.log("Petición asíncrona reciba");
+    console.log(request.body);
+    console.log(request.body.Limon_id);
+
+    Limon.delete(request.body.Limon_id)
+        .then(() => {
+            Limon.fetchAll()
+            .then(([rows, fieldData]) => {
+                return response.status(200).json({limones: rows});
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    }).catch((err) => {
+        console.log(err);
+        return response.status(500).json({message: "Internal Server Error"});
+    });
+    
+
+    
+}
 

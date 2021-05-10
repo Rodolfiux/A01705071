@@ -18,11 +18,13 @@ module.exports = class Usuario {
     
         return bcrypt.hash(this.password, 12)
             .then( (password) => {
-                return db.execute('INSERT INTO usuarios (username, nombre, password) values (?, ?, ?)',
+                
+                return db.execute('INSERT INTO usuarios (username, nombre, password) values (?, ?, ?);',
                     [this.username, this.nombre, password]
                 );
             }).catch( err => {
-                console.log(err);   
+                console.log(err);
+                throw Error("Nombre de usuario ya existe");   
             });
         
     }
@@ -33,7 +35,7 @@ module.exports = class Usuario {
     }
 
     static fetchOne(username) {
-        return db.execute('SELECT * FROM usuarios WHERE id = ?', [username]);
+        return db.execute('SELECT * FROM usuarios WHERE username = ?', [username]);
     }
 
 }
