@@ -1,0 +1,14 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/navbar.ejs') %>
+        <div class="container">
+          <h1>Nuevo Limon</h1>
+            <form action="nuevo-limon" method="POST">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" required>
+              <label for="descripcion">Descripcion</label>
+              <input type="text" name="descripcion" require>
+            <input type="submit" name="enviar" value="Registrar">
+          </form>
+              
+        </div>
+<%- include('includes/foot.ejs') %>

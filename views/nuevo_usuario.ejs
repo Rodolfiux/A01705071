@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/navbar.ejs') %>
+  <div class="container">
+    <h1>Limonera</h1>
+    <form action="new" method="POST">
+
+      <label for="username">Nombre de usuario</label>
+      <input type="text" name="username" required>
+      
+      <label for="nombre">Nombre completo</label>
+      <input type="text" name="nombre" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" required >
+      
+      <input type="submit" name="enviar" value="Ingresar">
+    </form>
+  </div>
+<%- include('includes/foot.ejs') %>    
